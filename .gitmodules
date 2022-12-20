@@ -1,0 +1,3 @@
+[submodule "scukless"]
+	path = scukless
+	url = https://github.com/Miguerfi/suckless
