@@ -7,13 +7,13 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
  /* Alternate bar class name */
  /* Alternate bar launch command */
-  static const char *fonts[] = { "monospace:size=10", "Font Awesome 6 Free Solid:style=Solid:pixelsize=12:antialias=true","Font Awesome 6 Brands Regular:style=Regular:pixelsize=12:antialias=true","Font Awesome 6 Free Regular:style=Regular:pixelsize=12:antialias=true" };
+  static const char *fonts[] = { "monospace:size=10", "Font Awesome 6 Free Solid:style=Solid:pixelsize=12:antialias=true","Font Awesome 6 Brands Regular:style=Regular:pixelsize=12:antialias=true","Font Awesome 6 Free Regular:style=Regular:pixelsize=12:antialias=true","Hack Nerd Font:style=Regular:pixelsize=12:antialias=true","Hack Nerd Font Mono:style=Regular:pixelsize=12:antialias=true","Hack Nerd Font Mono:style=Italic:pixelsize=12:antialias=true","Hack Nerd Font:style=Italic:pixelsize=12:antialias=true" };
 static const char dmenufont[]       = "monospace:size=10";
-static const char col_gray1[]       = "#282a36";
-static const char col_gray2[]       = "#ffb86c";
-static const char col_gray3[]       = "#ff79c6";
-static const char col_gray4[]       = "#ffb86c";
-static const char col_cyan[]        = "#282a36";
+static const char col_gray1[]       = "#1b101b";
+static const char col_gray2[]       = "#261827";
+static const char col_gray3[]       = "#ea8bf0";
+static const char col_gray4[]       = "#583c5a";
+static const char col_cyan[]        = "#7d5780";
 static const char *colors[][3]      = {
 	    /*               fg         bg         border   */
 	    [SchemeNorm] = { col_gray3, col_gray1, col_cyan },
@@ -42,9 +42,9 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "",      tile },    /* first entry is default */
-	{ "",      NULL },    /* no layout function means floating behavior */
-	{ "",      monocle },
+	{ "/",      tile },    /* first entry is default */
+	{ "/",      NULL },    /* no layout function means floating behavior */
+	{ "/",      monocle },
 };
 
 /* key definitions */

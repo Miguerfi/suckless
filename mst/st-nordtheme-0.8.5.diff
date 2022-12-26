@@ -1,5 +1,28 @@
---- config.def.h
-+++ config.def.h
+From 1904cbc9af2d518a77331deb082750366aaec90b Mon Sep 17 00:00:00 2001
+From: aleks <aleks.stier@icloud.com>
+Date: Tue, 31 May 2022 13:09:47 +0200
+Subject: [PATCH] Use nord-theme
+
+*"Inspired by the beauty of the arctic, the colors reflect the cold, yet
+harmonious world of ice and the colorfulness of the Aurora Borealis."* -
+[Nord Theme](https://www.nordtheme.com/)
+
+The default behaviour of st is to reverse the fore- and background
+colors of each selected cell. If you don't want the selection-colors to
+be reveresed but instead have fixed fore- and background colors apply on
+top of this patch the [selectioncolors](../selectioncolors/)-patch. Then
+set the following settings in your config.h:
+
+unsigned int selectionbg = 0;
+unsigned int selectionfg = 256;
+---
+ config.def.h | 42 ++++++++++++++++++++----------------------
+ 1 file changed, 20 insertions(+), 22 deletions(-)
+
+diff --git a/config.def.h b/config.def.h
+index 91ab8ca..afd00fd 100644
+--- a/config.def.h
++++ b/config.def.h
 @@ -96,32 +96,30 @@ unsigned int tabspaces = 8;
  /* Terminal colors (16 first used in escape sequence) */
  static const char *colorname[] = {
@@ -62,3 +85,6 @@
  unsigned int defaultcs = 256;
  static unsigned int defaultrcs = 257;
  
+-- 
+2.36.1
+
