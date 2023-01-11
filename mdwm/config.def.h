@@ -1,5 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 #include <X11/XF86keysym.h>
+#include "themes/onedark.h"   /* Importing Theme */
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
@@ -9,11 +10,6 @@ static const int topbar             = 1;        /* 0 means bottom bar */
  /* Alternate bar launch command */
   static const char *fonts[] = { "monospace:size=10", "Font Awesome 6 Free Solid:style=Solid:pixelsize=12:antialias=true","Font Awesome 6 Brands Regular:style=Regular:pixelsize=12:antialias=true","Font Awesome 6 Free Regular:style=Regular:pixelsize=12:antialias=true","Hack Nerd Font:style=Regular:pixelsize=12:antialias=true","Hack Nerd Font Mono:style=Regular:pixelsize=12:antialias=true","Hack Nerd Font Mono:style=Italic:pixelsize=12:antialias=true","Hack Nerd Font:style=Italic:pixelsize=12:antialias=true" };
 static const char dmenufont[]       = "monospace:size=10";
-static const char col_gray1[]       = "#1b101b";
-static const char col_gray2[]       = "#261827";
-static const char col_gray3[]       = "#ea8bf0";
-static const char col_gray4[]       = "#583c5a";
-static const char col_cyan[]        = "#7d5780";
 static const char *colors[][3]      = {
 	    /*               fg         bg         border   */
 	    [SchemeNorm] = { col_gray3, col_gray1, col_cyan },

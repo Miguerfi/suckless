@@ -1,5 +1,5 @@
 /* See LICENSE file for copyright and license details. */
-
+#include <stdlib.h>
 /* interval between updates (in ms) */
 const unsigned int interval = 1000;
 
@@ -61,15 +61,16 @@ static const char unknown_str[] = "n/a";
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
  */
+
 static const struct arg args[] = {
 	/* function format          argument */
 	//{ datetime, "%s",           "%F %T" },
 	//{ wifi_perc, "W: (%3s%% on ", "wlp8s0" },
   //{ netspeed_rx, "%sB/s  ", "enp0s3" },
-	{ run_command, "|:%4s", "amixer -c 1 sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
-	{ cpu_perc, "|:%s%%", NULL	      },
-	{ ram_perc, "|:%s%%", NULL	      },
-  { datetime, "|:%s",           "%a/%b/%d|:%r" },
+  	{ run_command, "^c#D3FF26^:%4s^d^", "amixer -c 1 sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
+	{ cpu_perc, "|^c#E5C07B^:%s%%^d^", NULL	      },
+	{ ram_perc, "|^c#61AFEF^:%s%%^d^", NULL	      },
+  { datetime, "|^c#C678DD^:%s",           "%a/%b/%d|:%r^d^" },
 
    
 };
